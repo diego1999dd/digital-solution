@@ -1,4 +1,4 @@
-@import "./styles/fonts.css";
+@import './styles/fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -10,8 +10,8 @@
   --color-tertiary: #797e88;
   --color-accent: #bff747;
   --color-background: #121212;
-  --color-alternative: #505050;
-  --color-alternative2: #fa3f3f;
+  --color-alternative: #2a2a2a;
+  --color-alternative2: #f8f8f8;
 }
 
 @layer base {
@@ -21,10 +21,10 @@
   }
 
   body {
-    @apply font-sans cursor-default scroll-smooth bg-primary;
+    @apply cursor-default scroll-smooth bg-primary font-sans;
   }
 
   h1 {
-    @apply font-gallery text-2xl text-accent;
+    @apply font-gallery text-2xl text-primary;
   }
 }

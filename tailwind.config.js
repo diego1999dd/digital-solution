@@ -20,6 +20,7 @@ module.exports = { // Adicione o sinal de igual (=) aqui
                 kanit: ['"Kanit"', 'sans-serif'],
                 gallery: ['"Gallery Modern"', 'sans-serif'],
                 jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+                marcellus: ['"Marcellus"', 'sans-serif'],
             },
         },
     },

@@ -23,7 +23,7 @@ function ReviewAvatars() {
           src={reviewer3}
           alt="Reviewer 3"
         />
-        <div className="flex items-center justify-center w-10 h-10 text-xs font-bold text-gray-600 bg-gray-200 border-2 border-primary rounded-full">
+        <div className="flex items-center justify-center w-10 h-10 text-xs font-bold text-primary bg-background border-2 border-primary rounded-full">
           15k+
         </div>
       </div>
