@@ -69,7 +69,7 @@ const CepSearchModal = () => {
     <>
       <button
         onClick={handleOpenModal}
-        className="flex items-center justify-center border border-secondary px-6 py-6"
+        className="flex w-full items-center justify-center border border-secondary px-4 py-4 md:px-6 md:py-6 lg:w-auto"
         aria-label="Buscar CEP"
       >
         <svg
@@ -87,8 +87,8 @@ const CepSearchModal = () => {
       </button>
 
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 p-4">
-          <div className="relative w-full max-w-2xl rounded-lg bg-white p-6 font-sans text-background shadow-2xl md:p-8">
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-60 md:items-center">
+          <div className="relative w-full max-w-2xl rounded-t-lg bg-white p-4 font-sans text-background shadow-2xl md:m-4 md:rounded-lg md:p-6">
             <button
               onClick={handleCloseModal}
               className="absolute right-4 top-4 text-gray-400 transition-colors hover:text-gray-700"
@@ -97,7 +97,7 @@ const CepSearchModal = () => {
               <XMarkIcon className="h-6 w-6" />
             </button>
 
-            <h2 className="mb-6 text-2xl font-bold text-gray-800">
+            <h2 className="mb-4 text-xl font-bold text-gray-800 md:mb-6 md:text-2xl">
               Consultar Endereço por CEP
             </h2>
 
@@ -128,7 +128,7 @@ const CepSearchModal = () => {
             {error && <p className="mb-4 text-center text-red-500">{error}</p>}
 
             {address && (
-              <div className="animate-fade-in grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="animate-fade-in grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
                 <div>
                   <label className="block text-sm font-medium text-tertiary">
                     Logradouro
@@ -137,7 +137,7 @@ const CepSearchModal = () => {
                     type="text"
                     value={address.logradouro || ''}
                     disabled
-                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2"
+                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -148,7 +148,7 @@ const CepSearchModal = () => {
                     type="text"
                     value={address.bairro || ''}
                     disabled
-                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2"
+                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -159,7 +159,7 @@ const CepSearchModal = () => {
                     type="text"
                     value={address.complemento || ''}
                     disabled
-                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2"
+                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -170,7 +170,7 @@ const CepSearchModal = () => {
                     type="text"
                     value={address.localidade || ''}
                     disabled
-                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2"
+                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2 text-sm md:text-base"
                   />
                 </div>
                 <div>
@@ -181,7 +181,7 @@ const CepSearchModal = () => {
                     type="text"
                     value={address.uf || ''}
                     disabled
-                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2"
+                    className="mt-1 w-full cursor-not-allowed rounded-md border-secondary bg-gray-100 p-2 text-sm md:text-base"
                   />
                 </div>
               </div>

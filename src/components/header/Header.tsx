@@ -8,8 +8,8 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="relative">
-      <div className="container mx-auto flex items-center justify-between p-4 py-5">
+    <header className="relative z-50 bg-white">
+      <div className="container mx-auto flex items-center justify-between p-4 py-3 md:py-5">
         <Link to="/">
           <img src="/logo-nex.svg" alt="Logo da Nex" className="w-24 md:w-40" />
         </Link>
@@ -21,23 +21,26 @@ const Header = () => {
         <div className="hidden items-center space-x-6 lg:flex">
           <CepSearchModal />
 
-          <button className="bg-accent px-10 py-5 font-kanit text-lg text-background transition-colors hover:bg-accent">
+          <button className="hover:bg-accent/90 bg-accent px-6 py-3 font-kanit text-base text-background transition-colors md:px-10 md:py-5 md:text-lg">
             Get A Quote
           </button>
         </div>
 
         <div className="lg:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} className="h-6 w-6" />
+            <FontAwesomeIcon
+              icon={isMenuOpen ? faTimes : faBars}
+              className="h-6 w-6"
+            />
           </button>
         </div>
       </div>
-    {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md lg:hidden">
+      {isMenuOpen && (
+        <div className="fixed inset-0 top-[72px] z-50 overflow-y-auto bg-white lg:hidden">
           <Nav />
-          <div className="p-4">
+          <div className="border-t border-gray-200 p-4">
             <CepSearchModal />
-            <button className="mt-4 w-full bg-accent px-10 py-5 font-kanit text-lg text-background transition-colors hover:bg-accent">
+            <button className="hover:bg-accent/90 mt-4 w-full bg-accent px-6 py-4 font-kanit text-base text-background transition-colors">
               Get A Quote
             </button>
           </div>

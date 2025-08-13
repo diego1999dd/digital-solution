@@ -31,13 +31,15 @@ function Home() {
     <main>
       <section
         style={{ backgroundImage: `url(${bgMain})` }}
-        className="min-h-[64vh] w-full p-8 font-sans md:p-16 lg:p-24"
+        className="min-h-[50vh] w-full p-4 font-sans md:min-h-[64vh] md:p-8 lg:p-16"
       >
         <div className="container relative mx-auto flex max-w-7xl flex-col justify-center gap-16 lg:flex-row">
           <div className="h-auto w-full space-y-3 lg:w-5/12">
-            <div className="">
-              <p>Great Design Services</p>
-              <p>Without The Pretentiousness.!</p>
+            <div className="text-center md:text-left">
+              <p className="text-sm md:text-base">Great Design Services</p>
+              <p className="text-sm md:text-base">
+                Without The Pretentiousness.!
+              </p>
             </div>
 
             <div>
@@ -48,7 +50,7 @@ function Home() {
             <div>
               <div className="relative">
                 <div className="flex items-center gap-3">
-                  <div className="relative mt-6 rounded-[40px] bg-accent py-8 pr-24 font-bold">
+                  <div className="relative mt-6 rounded-[40px] bg-accent py-6 pr-16 font-bold md:py-8 md:pr-24">
                     <p className="pl-6 text-left font-jakarta text-2xl">
                       WEB <br />
                       DESIGN
@@ -57,7 +59,7 @@ function Home() {
                       <img
                         src={avatar3D}
                         alt="3D Avatar"
-                        className="h-20 w-20"
+                        className="h-16 w-16 md:h-20 md:w-20"
                       />
                     </div>
                   </div>
@@ -68,14 +70,14 @@ function Home() {
           <div className="w-full lg:w-auto">
             <div className="my-10 flex flex-col gap-10 self-center md:flex-row lg:my-20">
               <div className="flex w-full flex-col md:w-2/3">
-                <p className="leading-relaxed">
+                <p className="text-center text-sm leading-relaxed md:text-left md:text-base">
                   We believe that the surest measure of success is when our
                   partners with us more than half It's more than just the <br />{' '}
                   visuals. We're here to support your growth.
                 </p>
                 <a
                   href="#"
-                  className="mt-6 flex justify-end text-base font-bold"
+                  className="mt-6 flex justify-center text-sm font-bold md:justify-end md:text-base"
                 >
                   <span className="flex border-b-2 border-background">
                     View All Services{' '}
@@ -83,15 +85,15 @@ function Home() {
                   </span>
                 </a>
               </div>
-              <div className="flex flex-col items-start md:items-end">
+              <div className="flex flex-col items-center md:items-end">
                 <ReviewAvatars />
-                <p className="mt-2 text-base">
+                <p className="mt-2 text-center text-sm md:text-left md:text-base">
                   Excellent: <span className="font-semibold"> 4,000+</span>{' '}
                   Reviews
                 </p>
               </div>
             </div>
-            <h1 className="relative -ml-0 -mt-8 font-gallery text-7xl leading-none text-background md:absolute md:-ml-44 md:text-9xl lg:text-[180px]">
+            <h1 className="relative -ml-0 -mt-8 text-center font-gallery text-6xl leading-none text-background md:absolute md:-ml-44 md:text-left md:text-9xl lg:text-[180px]">
               Solution
             </h1>
           </div>
@@ -104,8 +106,8 @@ function Home() {
           className="h-[20vh] w-full lg:h-auto lg:w-full"
         />
       </section>
-      <section className="bg-background pt-10 text-primary">
-        <div className="container relative mx-auto max-w-7xl space-y-12 p-8 md:p-16 lg:p-24">
+      <section className="bg-background pt-8 text-primary md:pt-10">
+        <div className="container relative mx-auto max-w-7xl space-y-8 p-4 md:space-y-12 md:p-8 lg:p-16">
           <h2 className="mb-4 w-full font-marcellus text-3xl/10 lg:w-2/3">
             We collaborate with a few disability service <br /> providers to
             create inclusive goods that <br /> meet their requirements.
@@ -168,8 +170,8 @@ function Home() {
       </section>
       <section>
         <div className="container mx-auto">
-          <div className="relative flex flex-col items-center justify-center space-y-6 p-8 text-center md:p-16 lg:p-24">
-            <div className="w-2/4 space-y-4 text-left">
+          <div className="relative flex flex-col items-center justify-center space-y-4 p-4 text-center md:space-y-6 md:p-8 lg:p-16">
+            <div className="w-full space-y-4 text-center md:w-2/4 md:text-left">
               <svg
                 width="105"
                 height="16"
@@ -189,7 +191,7 @@ function Home() {
                 Empowering Brands Through Strategic Digital Services
               </h2>
             </div>
-            <div className="mx-auto flex w-[1220px] items-center justify-center gap-4 border-b-2 pb-16">
+            <div className="mx-auto flex w-full max-w-[1220px] flex-col items-center justify-center gap-4 border-b-2 px-4 pb-8 md:flex-row md:pb-16">
               <div className="h-20 w-px bg-secondary"></div>
 
               <p className="max-w-2xl text-left text-sm text-tertiary">
@@ -203,8 +205,8 @@ function Home() {
               alt=""
               className="absolute left-0 top-0 z-0 w-32 pt-[75px]"
             />
-            <div className="mx-auto flex w-[1220px] flex-row gap-6 pt-8">
-              <div className="relative flex w-1/3 flex-col space-y-4 border-2 border-secondary p-10 text-left">
+            <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-6 px-4 pt-8 md:flex-row">
+              <div className="relative mb-12 flex w-full flex-col space-y-4 border-2 border-secondary p-6 text-left md:mb-0 md:w-1/3 md:p-10">
                 <p className="flex items-center gap-2 text-sm text-tertiary">
                   <svg
                     width="5"
@@ -246,7 +248,7 @@ function Home() {
                   <ArrowDownRightIcon className="h-8 w-8 text-gray-600" />
                 </button>
               </div>
-              <div className="relative flex w-1/3 flex-col space-y-4 border-2 border-accent p-10 text-left">
+              <div className="relative mb-12 flex w-full flex-col space-y-4 border-2 border-accent p-6 text-left md:mb-0 md:w-1/3 md:p-10">
                 <p className="flex items-center gap-2 text-sm text-tertiary">
                   <svg
                     width="5"
@@ -288,7 +290,7 @@ function Home() {
                   <ArrowRightIcon className="h-8 w-8 text-gray-600" />
                 </button>
               </div>
-              <div className="relative flex w-1/3 flex-col space-y-4 border-2 border-secondary p-10 text-left">
+              <div className="relative mb-12 flex w-full flex-col space-y-4 border-2 border-secondary p-6 text-left md:mb-0 md:w-1/3 md:p-10">
                 <p className="flex items-center gap-2 text-sm text-tertiary">
                   <svg
                     width="5"
@@ -339,10 +341,10 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div className="mx-auto flex w-[1220px] flex-row gap-6 pt-8">
-              <div className="flex h-80 w-80 items-center justify-center rounded-full border border-gray-300">
+            <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-6 overflow-x-auto px-4 pt-8 md:flex-row">
+              <div className="flex h-60 min-w-[280px] items-center justify-center rounded-full border border-gray-300 md:h-80 md:w-80">
                 <div className="bg-white px-2 text-center">
-                  <p className="text-4xl font-bold text-gray-800 md:text-5xl">
+                  <p className="text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">
                     35k+
                   </p>
                   <p className="mt-2 font-marcellus text-xl text-gray-500">
@@ -351,9 +353,9 @@ function Home() {
                 </div>
               </div>
 
-              <div className="-ml-8 flex h-80 w-80 items-center justify-center rounded-full border border-gray-300 sm:-ml-12">
+              <div className="flex h-60 min-w-[280px] items-center justify-center rounded-full border border-gray-300 md:-ml-12 md:h-80 md:w-80">
                 <div className="bg-white px-2 text-center">
-                  <p className="text-4xl font-bold text-gray-800 md:text-5xl">
+                  <p className="text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">
                     10k+
                   </p>
                   <p className="mt-2 font-marcellus text-xl text-gray-500">
@@ -362,9 +364,9 @@ function Home() {
                 </div>
               </div>
 
-              <div className="-ml-8 flex h-80 w-80 items-center justify-center rounded-full border border-gray-300 sm:-ml-12">
+              <div className="flex h-60 min-w-[280px] items-center justify-center rounded-full border border-gray-300 md:-ml-12 md:h-80 md:w-80">
                 <div className="bg-white px-2 text-center">
-                  <p className="text-4xl font-bold text-gray-800 md:text-5xl">
+                  <p className="text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">
                     25+
                   </p>
                   <p className="mt-2 font-marcellus text-xl text-gray-500">
@@ -373,9 +375,9 @@ function Home() {
                 </div>
               </div>
 
-              <div className="-ml-8 flex h-80 w-80 items-center justify-center rounded-full border border-gray-300 sm:-ml-12">
+              <div className="flex h-60 min-w-[280px] items-center justify-center rounded-full border border-gray-300 md:-ml-12 md:h-80 md:w-80">
                 <div className="bg-white px-2 text-center">
-                  <p className="text-4xl font-bold text-gray-800 md:text-5xl">
+                  <p className="text-3xl font-bold text-gray-800 md:text-4xl lg:text-5xl">
                     88
                   </p>
                   <p className="mt-2 font-marcellus text-xl text-gray-500">
@@ -395,7 +397,7 @@ function Home() {
         </div>
       </section>
       <section>
-        <div className="mx-auto flex w-[1220px] gap-6 pt-28">
+        <div className="mx-auto flex w-full max-w-[1220px] gap-6 px-4 pt-16 md:pt-28">
           <div className="flex w-full flex-col items-center space-y-4">
             <svg
               width="130"
@@ -414,24 +416,26 @@ function Home() {
             <h2 className="font-marcellus text-6xl">How we work</h2>
           </div>
         </div>
-        <div className="mx-auto flex w-[1220px] flex-row gap-8 pt-12">
+        <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-8 px-4 pt-12 md:flex-row">
           <div className="flex-1">
             <div className="flex items-center gap-4">
               <div className="flex flex-shrink-0 items-center justify-center">
                 <img
                   src={icon1}
                   alt="Research and Strategy"
-                  className="h-24 w-24"
+                  className="h-16 w-16 md:h-24 md:w-24"
                 />
               </div>
 
               <div className="h-px flex-grow bg-gray-400"></div>
 
-              <span className="text-5xl font-bold text-gray-200">01</span>
+              <span className="text-3xl font-bold text-gray-200 md:text-5xl">
+                01
+              </span>
             </div>
 
             <div className="mt-6">
-              <h3 className="font-marcellus text-2xl text-background">
+              <h3 className="font-marcellus text-xl text-background md:text-2xl">
                 Research and Strategy
               </h3>
               <p className="mt-4 leading-relaxed text-tertiary">
@@ -447,17 +451,19 @@ function Home() {
                 <img
                   src={icon2}
                   alt="Research and Strategy"
-                  className="h-24 w-24"
+                  className="h-16 w-16 md:h-24 md:w-24"
                 />
               </div>
 
               <div className="h-px flex-grow bg-gray-400"></div>
 
-              <span className="text-5xl font-bold text-gray-200">02</span>
+              <span className="text-3xl font-bold text-gray-200 md:text-5xl">
+                02
+              </span>
             </div>
 
             <div className="mt-6">
-              <h3 className="font-marcellus text-2xl text-background">
+              <h3 className="font-marcellus text-xl text-background md:text-2xl">
                 Plan Customization
               </h3>
               <p className="mt-4 leading-relaxed text-tertiary">
@@ -472,17 +478,19 @@ function Home() {
                 <img
                   src={icon3}
                   alt="Research and Strategy"
-                  className="h-24 w-24"
+                  className="h-16 w-16 md:h-24 md:w-24"
                 />
               </div>
 
               <div className="h-px flex-grow bg-gray-400"></div>
 
-              <span className="text-5xl font-bold text-gray-200">03</span>
+              <span className="text-3xl font-bold text-gray-200 md:text-5xl">
+                03
+              </span>
             </div>
 
             <div className="mt-6">
-              <h3 className="font-marcellus text-2xl text-background">
+              <h3 className="font-marcellus text-xl text-background md:text-2xl">
                 Finished & User Testing
               </h3>
               <p className="mt-4 leading-relaxed text-tertiary">
@@ -493,9 +501,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-20 bg-alternative2 py-24">
-        <div className="mx-auto flex w-[1220px] flex-row gap-12">
-          <div className="flex w-7/12 flex-col space-y-8">
+      <section className="mt-12 bg-alternative2 py-16 md:mt-20 md:py-24">
+        <div className="mx-auto flex w-full max-w-[1220px] flex-col gap-8 px-4 md:flex-row md:gap-12">
+          <div className="flex w-full flex-col space-y-8 md:w-7/12">
             <div>
               <div className="w-3/2 ml-12">
                 <p className="flex items-center gap-2 text-sm font-semibold tracking-wider text-gray-500">
@@ -534,7 +542,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="flex w-3/12 flex-col gap-10">
+          <div className="flex w-full flex-col gap-6 md:w-3/12 md:gap-10">
             <div>
               <img
                 src={image2}
@@ -555,7 +563,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex w-1/3 flex-col space-y-4 pt-10 text-tertiary">
+          <div className="flex w-full flex-col space-y-4 pt-6 text-tertiary md:w-1/3 md:pt-10">
             <p className="">
               We believe that the surest measure of success is when our partners
               with us more than half It's more than just the visuals. We're here
@@ -574,9 +582,9 @@ function Home() {
                 behaviours.
               </p>
             </div>
-            <div className="flex flex-row items-center gap-4 pt-16">
+            <div className="flex flex-col items-center gap-4 pt-8 md:flex-row md:pt-16">
               {' '}
-              <div className="relative flex h-44 flex-col items-center justify-end rounded-[40px] bg-accent px-10 pb-8">
+              <div className="relative mb-8 flex h-36 w-full flex-col items-center justify-end rounded-[40px] bg-accent px-6 pb-6 md:mb-0 md:h-44 md:w-auto md:px-10 md:pb-8">
                 <img
                   src={image4}
                   alt="Marketing"
@@ -587,7 +595,7 @@ function Home() {
                   Marketing <br /> Strategy
                 </p>
               </div>
-              <div className="relative flex h-44 flex-col items-center justify-end rounded-[40px] bg-accent px-12 pb-8">
+              <div className="relative flex h-36 w-full flex-col items-center justify-end rounded-[40px] bg-accent px-6 pb-6 md:h-44 md:w-auto md:px-12 md:pb-8">
                 <img
                   src={image5}
                   alt="Marketing"
@@ -602,11 +610,11 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-row items-center justify-between">
+      <section className="bg-background py-12 md:py-16 lg:py-24">
+        <div className="mx-auto max-w-6xl px-4 md:px-8">
+          <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
             <div className="space-y-4">
-              <h2 className="font-gallery text-7xl leading-tight text-primary">
+              <h2 className="text-center font-gallery text-5xl leading-tight text-primary md:text-left md:text-7xl">
                 Let's Create <br /> Something Great
               </h2>
               <p className="text-sm text-primary">
@@ -615,7 +623,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="flex h-32 w-32 cursor-pointer items-center justify-center rounded-full bg-accent">
+            <div className="flex h-24 w-24 cursor-pointer items-center justify-center rounded-full bg-accent md:h-32 md:w-32">
               <span className="flex items-center gap-2 font-semibold">
                 Let's Talk <ArrowUpRightIcon className="h-4 w-4" />
               </span>
