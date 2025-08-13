@@ -7,6 +7,7 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Des
 ## ✨ Funcionalidades
 
 - **Layout Fiel ao Figma:** A interface foi construída seguindo as especificações de design, incluindo espaçamentos, tipografia e disposição dos elementos.
+- **Responsividade:** O layout é totalmente adaptável para dispositivos móveis, mesmo sem um design mobile de referência.
 - **Modal de Busca de CEP:** Ao clicar no ícone de busca no cabeçalho, um modal é aberto para a consulta de CEP.
 - **Integração com ViaCEP:** O modal consome a API pública do [ViaCEP](https://viacep.com.br/) para buscar dados de endereço.
 - **Validação e Formatação:** O campo aceita CEPs com ou sem formatação (hífen) e valida se o CEP possui 8 dígitos.
