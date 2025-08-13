@@ -33,15 +33,15 @@ function Home() {
         style={{ backgroundImage: `url(${bgMain})` }}
         className="min-h-[64vh] w-full p-8 font-sans md:p-16 lg:p-24"
       >
-        <div className="container relative mx-auto flex max-w-7xl flex-row justify-center gap-16">
-          <div className="h-auto w-5/12 space-y-3">
+        <div className="container relative mx-auto flex max-w-7xl flex-col justify-center gap-16 lg:flex-row">
+          <div className="h-auto w-full space-y-3 lg:w-5/12">
             <div className="">
               <p>Great Design Services</p>
               <p>Without The Pretentiousness.!</p>
             </div>
 
             <div>
-              <h1 className="mt-2 font-gallery text-[180px] leading-none text-background">
+              <h1 className="mt-2 font-gallery text-7xl leading-none text-background md:text-9xl lg:text-[180px]">
                 Digital
               </h1>
             </div>
@@ -53,7 +53,7 @@ function Home() {
                       WEB <br />
                       DESIGN
                     </p>
-                    <div className="absolute -right-24 top-1/2 -translate-y-1/2 rounded-[45px] bg-background px-6 py-6">
+                    <div className="absolute -right-12 top-1/2 -translate-y-1/2 rounded-[45px] bg-background px-6 py-6 md:-right-24">
                       <img
                         src={avatar3D}
                         alt="3D Avatar"
@@ -65,9 +65,9 @@ function Home() {
               </div>
             </div>
           </div>
-          <div>
-            <div className="my-20 flex flex-row gap-10 self-center">
-              <div className="flex w-2/3 flex-col">
+          <div className="w-full lg:w-auto">
+            <div className="my-10 flex flex-col gap-10 self-center md:flex-row lg:my-20">
+              <div className="flex w-full flex-col md:w-2/3">
                 <p className="leading-relaxed">
                   We believe that the surest measure of success is when our
                   partners with us more than half It's more than just the <br />{' '}
@@ -83,7 +83,7 @@ function Home() {
                   </span>
                 </a>
               </div>
-              <div className="flex flex-col items-end">
+              <div className="flex flex-col items-start md:items-end">
                 <ReviewAvatars />
                 <p className="mt-2 text-base">
                   Excellent: <span className="font-semibold"> 4,000+</span>{' '}
@@ -91,7 +91,7 @@ function Home() {
                 </p>
               </div>
             </div>
-            <h1 className="absolute -ml-44 -mt-8 font-gallery text-[180px] leading-none text-background">
+            <h1 className="relative -ml-0 -mt-8 font-gallery text-7xl leading-none text-background md:absolute md:-ml-44 md:text-9xl lg:text-[180px]">
               Solution
             </h1>
           </div>
@@ -100,18 +100,18 @@ function Home() {
       <section>
         <img
           src={bannerMain2}
-          alt="Banner da mulher apontando notebook"
-          className="h-auto w-full"
+          alt="Banner da mulher apontando para notebook"
+          className="h-[20vh] w-full lg:h-auto lg:w-full"
         />
       </section>
       <section className="bg-background pt-10 text-primary">
         <div className="container relative mx-auto max-w-7xl space-y-12 p-8 md:p-16 lg:p-24">
-          <h2 className="mb-4 w-2/3 font-marcellus text-3xl/10">
+          <h2 className="mb-4 w-full font-marcellus text-3xl/10 lg:w-2/3">
             We collaborate with a few disability service <br /> providers to
             create inclusive goods that <br /> meet their requirements.
           </h2>
 
-          <div className="mx-auto flex max-w-4xl flex-row items-center justify-center gap-24">
+          <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-12 md:flex-row md:gap-24">
             <img
               src={experienceInfo}
               alt="Experience Info"
@@ -141,10 +141,10 @@ function Home() {
             </div>
           </div>
 
-          <div className="flex items-center gap-4 p-8 text-alternative">
+          <div className="flex flex-col items-center gap-4 p-8 text-alternative md:flex-row">
             <div className="h-px w-32 bg-alternative"></div>
 
-            <h3 className="flex-shrink-0 font-marcellus text-2xl text-primary">
+            <h3 className="flex-shrink-0 text-center font-marcellus text-2xl text-primary md:text-left">
               We Worked With Global Largest Brands
             </h3>
 
@@ -162,7 +162,7 @@ function Home() {
           <img
             src={logoEllipses}
             alt="Decorative Ellipses"
-            className="absolute right-0 top-0 z-0"
+            className="absolute right-0 top-0 z-0 hidden lg:block"
           />
         </div>
       </section>
