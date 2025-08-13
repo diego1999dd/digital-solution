@@ -3,8 +3,8 @@ import Nav from "../nav/Nav";
 
 const Header = () => {
   return (
-    <header className="bg-primary">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <header>
+      <div className="container mx-auto flex items-center justify-between p-4 py-5">
         {/* Bloco 1: Logo */}
         <Link to="/home">
           <img src="/logo-nex.svg" alt="Logo da Nex" className="w-24 md:w-40" />
