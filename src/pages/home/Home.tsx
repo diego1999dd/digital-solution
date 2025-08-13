@@ -1,10 +1,6 @@
 import bgMain from '@/assets/bg.jpg';
 import avatar3D from '@/assets/avatar-3d.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faArrowRight,
-  faArrowUpRightFromSquare,
-} from '@fortawesome/free-solid-svg-icons';
+
 import ReviewAvatars from '../../components/reviews/Reviews';
 import bannerMain2 from '@/assets/banner-main-2.png';
 import bannerMain3 from '@/assets/banner-main-3.png';
