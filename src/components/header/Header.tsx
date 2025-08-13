@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <div className="container mx-auto flex items-center justify-between p-4 py-5">
-        <Link to="/home">
+        <Link to="/">
           <img src="/logo-nex.svg" alt="Logo da Nex" className="w-24 md:w-40" />
         </Link>
 
