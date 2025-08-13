@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+![alt text](image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Desafio Front-End Noweb - Digital Solution
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido como parte do processo seletivo para a vaga de Desenvolvedor Front-End na Noweb. O objetivo foi replicar uma landing page a partir de um design no Figma, garantindo fidelidade visual, responsividade e a implementação de uma funcionalidade adicional de busca de CEP com integração a uma API externa.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- **Layout Fiel ao Figma:** A interface foi construída seguindo as especificações de design, incluindo espaçamentos, tipografia e disposição dos elementos.
+- **Modal de Busca de CEP:** Ao clicar no ícone de busca no cabeçalho, um modal é aberto para a consulta de CEP.
+- **Integração com ViaCEP:** O modal consome a API pública do [ViaCEP](https://viacep.com.br/) para buscar dados de endereço.
+- **Validação e Formatação:** O campo aceita CEPs com ou sem formatação (hífen) e valida se o CEP possui 8 dígitos.
+- **Preenchimento Automático:** Os campos de Logradouro, Bairro, Complemento, Cidade e Estado são preenchidos automaticamente com os dados da API.
+- **Campos Bloqueados:** Após a consulta, os campos de endereço são bloqueados para edição, conforme solicitado.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O projeto foi desenvolvido utilizando a seguinte stack:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **[React](https://react.dev/)**
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[Vite](https://vitejs.dev/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[pnpm](https://pnpm.io/)** como gerenciador de pacotes
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔗 Link da Aplicação
+
+O projeto está hospedado na Vercel e pode ser acessado através do link abaixo:
+
+**[Clique aqui para acessar a demonstração ao vivo](https://seu-link-aqui.vercel.app)** _(Substitua pelo seu link da Vercel após o deploy)_
+
+## 🏁 Começando
+
+Para rodar este projeto localmente, siga os passos abaixo.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+
+- [Node.js](https://nodejs.org/en) (Recomendado versão LTS)
+- [pnpm](https://pnpm.io/installation) (Pode ser instalado globalmente com `npm install -g pnpm`)
+- [Git](https://git-scm.com/)
+
+### Instalação
+
+1.  Clone o repositório:
+
+    ```bash
+    git clone [https://github.com/seu-usuario/digital-solution.git](https://github.com/seu-usuario/digital-solution.git)
+    ```
+
+2.  Navegue até o diretório do projeto:
+
+    ```bash
+    cd digital-solution
+    ```
+
+3.  Instale as dependências com o pnpm:
+    ```bash
+    pnpm install
+    ```
+
+## 🚀 Rodando o Projeto
+
+Após a instalação das dependências, você pode iniciar o servidor de desenvolvimento local:
+
+```bash
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O servidor será iniciado, e a aplicação estará disponível em **`http://localhost:5173`** (ou outra porta, caso a 5173 esteja em uso).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏗️ Build
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para gerar a versão de produção otimizada do projeto, execute o comando:
+
+```bash
+pnpm build
+```
+
+Este comando irá compilar o código TypeScript e gerar os arquivos estáticos no diretório `dist/`, prontos para o deploy.
+
+## 📂 Estrutura de Pastas
+
+O projeto está organizado da seguinte forma para facilitar a manutenção e escalabilidade:
+
+```
+digital-solution/
+├── public/              # Arquivos estáticos e fontes
+├── src/
+│   ├── assets/          # Imagens, SVGs e outros recursos
+│   ├── components/      # Componentes React reutilizáveis
+│   │   ├── cep/
+│   │   ├── footer/
+│   │   ├── header/
+│   │   └── ...
+│   ├── pages/           # Componentes que representam as páginas
+│   │   └── home/
+│   ├── styles/          # Arquivos de estilo globais e fontes
+│   ├── App.tsx          # Componente principal que gerencia as rotas
+│   └── main.tsx         # Ponto de entrada da aplicação
+├── package.json
+└── README.md
 ```
