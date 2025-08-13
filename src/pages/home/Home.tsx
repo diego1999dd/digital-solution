@@ -620,7 +620,7 @@ function Home() {
               </p>
             </div>
 
-            <div className="flex h-40 w-40 cursor-pointer items-center justify-center rounded-full bg-accent">
+            <div className="flex h-32 w-32 cursor-pointer items-center justify-center rounded-full bg-accent">
               <span className="flex items-center gap-2 font-semibold">
                 Let's Talk <ArrowUpRightIcon className="h-4 w-4" />
               </span>
